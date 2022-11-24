@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alura MIDI</title>
+    <title>My PADS</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +14,8 @@
     <link rel="icon" type="image/png" href="images/bateria.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilos.css">
+
     
-    <script src="main.js"></script>
 
 </head>
 <body>
@@ -23,7 +23,7 @@
     <h1>Pad Pro</h1>
 
     <section class="teclado">
-        <button onclick="" class="tecla tecla_pom">Pom</button>
+        <button onclick="tocaSomPom()" class="tecla tecla_pom">Pom</button>
         <button class="tecla tecla_clap">Clap</button>
         <button class="tecla tecla_tim">Tim</button>
 
@@ -35,7 +35,13 @@
         <button class="tecla tecla_tic">Tic</button>
         <button class="tecla tecla_tom">Tom</button>
     </section>
+
+
+
                 <!--Para os audios aparecerem precisa colocar o atributo "controls" dentro da tag audio-->
+
+
+                
     <audio src="sounds/keyq.wav" id="som_tecla_pom"></audio>
     <audio src="sounds/keyw.wav" id="som_tecla_clap"></audio>
     <audio src="sounds/keye.wav" id="som_tecla_tim"></audio>
@@ -50,6 +56,7 @@
      
     </script>
 
-
+    <script src="main.js"></script>
 </body>
+
 </html>
