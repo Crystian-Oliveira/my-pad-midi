@@ -61,9 +61,8 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 //     // more statements
 //  }
 
-let contador = 0
 
-while (contador <= listaDeTeclas.length) {
+for (let contador = 0; contador < listaDeTeclas.length; contador++) {
 
     const tecla = listaDeTeclas[contador]; //conta todas as teclas
     const instrumento = tecla.classList[1]; //pega a ultima class da tecla selecionada "classList[qualClass]"
@@ -76,8 +75,4 @@ while (contador <= listaDeTeclas.length) {
     tecla.onclick = function (){
         tocaSom (idAudio)
     }
-
-    contador = contador + 1;
-
-    console.log(contador);
 }
