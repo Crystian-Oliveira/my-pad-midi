@@ -50,29 +50,41 @@
 
 ///<!-------------------------------------------------------- I make a 'const' to give a name for the function -------------------------------------------
 
-function tocaSom (idElementoAudio) {
-    document.querySelector(idElementoAudio).play()
-}
 
-const listaDeTeclas = document.querySelectorAll('.tecla');
 
 // for (var i = 0; i < 9; i++) {
 //     console.log(i);
 //     // more statements
 //  }
 
+function tocaSom (idElementoAudio) {
+    document.querySelector(idElementoAudio).play()
+}
+
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
 for (let contador = 0; contador < listaDeTeclas.length; contador++) {
 
     const tecla = listaDeTeclas[contador]; //conta todas as teclas
     const instrumento = tecla.classList[1]; //pega a ultima class da tecla selecionada "classList[qualClass]"
     const idAudio = `#som_${instrumento}`; //incrementa à string "#som_" aquela class que foi selecionada pelo instrumento. Que acaba com tecla_...
-
-    console.log (idAudio)
-
-
     
+
     tecla.onclick = function (){
-        tocaSom (idAudio)
+        tocaSom (idAudio);
+      
     }
+    
+    tecla.onkeydown = function(){
+        tecla.classList.add('ativa');
+
+        tecla.onkeyup = function(){ 
+            tecla.classList.remove('ativa')}
+
+            
 }
+}
+
+
+
+
